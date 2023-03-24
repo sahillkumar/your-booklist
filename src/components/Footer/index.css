@@ -1,0 +1,28 @@
+.footer {
+  position: relative;
+  bottom: 0;
+  background: #fff;
+  color: #ff9c9c;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+}
+
+.socialWrapper {
+  width: 16%;
+  text-align: center;
+  margin-right: calc(4% + 8px);
+}
+
+.socialIcons {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
