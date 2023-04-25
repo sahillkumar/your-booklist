@@ -1,6 +1,13 @@
 .booklist {
-  height: 90%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   position: relative;
-  border: 1px solid rgb(255, 255, 255, 0.7);
+}
+
+.booklistContainer {
+  width: 50%;
+  background-color: rgb(0, 0, 0, 0.75);
+  height: 90%;
+  padding: 2% 8%;
+  box-sizing: border-box;
 }

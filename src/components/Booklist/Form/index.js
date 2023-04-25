@@ -19,6 +19,7 @@ const Form = () => {
 
   return (
     <div className="formWrapper">
+      <hr />
       <form onSubmit={handleSubmit}>
         <input
           type="text"

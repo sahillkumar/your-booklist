@@ -5,9 +5,11 @@ import "./index.css";
 
 const Booklist = () => {
   return (
-    <div className="booklist">
-      <List />
-      <Form />
+    <div className="booklistContainer">
+      <div className="booklist">
+        <List />
+        <Form />
+      </div>
     </div>
   );
 };
