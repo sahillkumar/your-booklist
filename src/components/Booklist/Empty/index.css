@@ -1,0 +1,17 @@
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
+}
+
+.emptyImage {
+  height: 72px;
+  width: 72px;
+}
+
+a {
+  color: aqua;
+  margin-left: 8px;
+}

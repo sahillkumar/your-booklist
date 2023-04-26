@@ -1,7 +1,7 @@
 import { BookContext } from "contexts/bookcontext";
 import React, { useContext } from "react";
 import "./index.css";
-import empty from "assets/images/empty.svg";
+import EmptyComponent from "../Empty";
 
 const ListItem = ({ book: { title, id } }) => {
   const { dispatch } = useContext(BookContext);
@@ -32,12 +32,7 @@ const List = () => {
             </ul>
           </div>
         ) : (
-          <div className="empty">
-            <div className="emptyImage">
-              <img src={empty} alt="empty" height="100%" width="100%" />
-            </div>
-            <span>No books to read.</span>
-          </div>
+          <EmptyComponent />
         )}
       </div>
     </>

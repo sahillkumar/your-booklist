@@ -1,14 +1,16 @@
 .header {
   text-align: center;
   font-size: 32px;
-  font-family: "Life Savers", cursive;
   padding: 16px;
+  font-family: "EB Garamond", serif;
+  font-weight: lighter;
+  color: wheat;
 }
 
 hr {
   margin: auto;
   padding: 0;
-  border: 0.5px solid rgb(255, 255, 255, 0.7);
+  border: 0.5px solid wheat;
   width: 90%;
 }
 
@@ -29,20 +31,18 @@ hr {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin: 8px 0;
-  border: 1px solid rgb(255, 255, 255, 0.7);
-  color: white;
-  background-color: #ff9c9c;
+  margin: 12px 0;
+  border: 1px solid wheat;
+  color: wheat;
+  font-weight: bold;
 }
-
 .list li:hover {
   text-decoration: line-through;
-  color: #ff9c9c;
-  background-color: rgb(255, 255, 255, 0.7);
+  border: 1px solid wheat;
 }
 
 .list .title {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .empty {
