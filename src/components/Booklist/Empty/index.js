@@ -8,17 +8,18 @@ const EmptyComponent = () => {
       <div className="emptyImage">
         <img src={empty} alt="empty" height="100%" width="100%" />
       </div>
-      <span>No books to read.</span>
-      <p>
-        Don't know what to read ?
+      <div style={{ textAlign: "center" }}>
+        Hurray, you don't have any pending books to read. <br />
+        Become an avid reader, start adding books. <br />
+        Don't know what to read ? <br />
         <a
           href="https://www.goodreads.com/shelf/show/to-read"
           target="_blank"
           rel="noreferrer"
         >
-          click here
+          let me help you
         </a>
-      </p>
+      </div>
     </div>
   );
 };

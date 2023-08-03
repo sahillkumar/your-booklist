@@ -4,11 +4,14 @@
   align-items: center;
   flex-direction: column;
   height: 90%;
+  color: wheat;
+  font-size: 16px;
 }
 
 .emptyImage {
   height: 72px;
   width: 72px;
+  margin-bottom: 16px;
 }
 
 a {
