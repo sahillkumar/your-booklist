@@ -11,3 +11,71 @@
   padding: 2% 8%;
   box-sizing: border-box;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .booklistContainer {
+    width: 70%;
+  }
+  .header {
+    font-size: 20px;
+  }
+
+  .empty {
+    font-size: 12px;
+  }
+
+  .list li {
+    padding: 4px;
+  }
+
+  .list .title {
+    font-size: 14px;
+  }
+
+  input,
+  button {
+    padding: 4px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .booklistContainer {
+    width: 60%;
+  }
+  .header {
+    font-size: 24px;
+  }
+  .empty {
+    font-size: 14px;
+  }
+
+  .list li {
+    padding: 6px;
+  }
+
+  .list .title {
+    font-size: 16px;
+  }
+
+  input,
+  button {
+    padding: 6px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .booklistContainer {
+    width: 50%;
+  }
+  .header {
+    font-size: 32px;
+  }
+  .empty {
+    font-size: 16px;
+  }
+  .list li {
+    padding: 10px;
+  }
+}
