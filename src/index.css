@@ -5,14 +5,5 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: bolder;
   font-family: "Ysabeau", sans-serif;
-}
-
-.container {
-  background-image: url("assets/images/banner.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: wheat;
 }
