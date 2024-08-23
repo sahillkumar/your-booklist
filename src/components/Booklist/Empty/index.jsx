@@ -1,5 +1,4 @@
 import empty from "assets/images/empty.svg";
-import "./index.css";
 import React from "react";
 
 const EmptyComponent = () => {

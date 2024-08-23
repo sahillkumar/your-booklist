@@ -1,6 +1,5 @@
 import { BookContext } from "contexts/bookcontext";
 import React, { useContext, useState } from "react";
-import "./index.css";
 
 const Form = () => {
   const { dispatch } = useContext(BookContext);
@@ -19,7 +18,6 @@ const Form = () => {
 
   return (
     <div className="formWrapper">
-      <hr />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
