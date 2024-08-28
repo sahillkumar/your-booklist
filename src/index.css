@@ -5,5 +5,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: bolder;
   font-family: "Ysabeau", sans-serif;
-  color: wheat;
+  color: var(--primary-color);
+}
+
+:root {
+  --primary-color: wheat;
+  --secondary-color: rgba(245, 222, 179, 0.25);
+}
+
+::selection {
+  background-color: var(--secondary-color);
 }

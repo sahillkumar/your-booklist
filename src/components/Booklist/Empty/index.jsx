@@ -1,4 +1,4 @@
-import empty from "assets/images/empty.svg";
+import empty from "assets/icons/empty.svg";
 import React from "react";
 
 const EmptyComponent = () => {
@@ -8,8 +8,7 @@ const EmptyComponent = () => {
         <img src={empty} alt="empty" height="100%" width="100%" />
       </div>
       <div style={{ textAlign: "center" }}>
-        Hurray, you don't have any pending books to read. <br />
-        Become an avid reader, start adding books. <br />
+        No books on your reading list yet! <br />
         Don't know what to read ? <br />
         <a
           href="https://www.goodreads.com/shelf/show/to-read"
