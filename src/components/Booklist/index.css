@@ -35,27 +35,50 @@
     padding: 8px;
     border: 1px solid;
     font-size: 13px;
-    cursor: pointer;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
     display: flex;
     align-items: center;
-
-    & > * {
-      min-height: 24px;
-    }
+    gap: 6px;
+    box-sizing: border-box;
 
     .title {
       flex: 1;
-      border: 1px solid;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 6px;
+    }
+
+    button {
+      cursor: pointer;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      svg {
+        height: 16px;
+        width: 16px;
+        fill: wheat;
+      }
+    }
+
+    button:hover {
+      svg {
+        fill: wheat;
+        fill-opacity: 0.5;
+      }
+    }
+
+    button[disabled] {
+      pointer-events: none;
     }
   }
 
-  li:hover {
-    text-decoration: line-through;
+  .bookCompleted {
     background-color: rgba(245, 222, 179, 0.25);
+  }
+
+  .changeBookStatusInput {
+    cursor: pointer;
+    accent-color: var(--primary-color);
   }
 }
 
