@@ -9,6 +9,10 @@ const List = () => {
     useContext(BookContext);
 
   const removeBook = (bookId) => {
+    if (bookId === editBookId) {
+      alert("Please edit your book first.");
+      return;
+    }
     const updatedBooks = books?.filter((book) => book?.id !== bookId);
     dispatch({ type: REMOVE_BOOK, payload: updatedBooks });
   };
