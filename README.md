@@ -2,12 +2,14 @@
 
 ## Overview
 
-This project is designed to help users manage their reading lists by allowing them to add and delete books. The goal is to provide a simple and efficient way to keep track of books you want to read. The list persists even if you close your browser's tab. Happy Reading :)
+This project is designed to help users manage their reading lists. The goal is to provide a simple and efficient way to keep track of books you want to read. The list persists even if you close your browser's tab. Happy Reading :)
 
 ## Features
 
 - **Add Books**: Easily add books to your reading list.
-- **Delete Books**: Remove books from your list when you've completed them or if you no longer wish to read them.
+- **Edit Book**: Easily edit the added book if you wish to.
+- **Mark as Read**: Once you've completed reading the book, you can mark them as done.
+- **Remove Books**: Remove books if you no longer wish to read them.
 
 ## Installation
 
