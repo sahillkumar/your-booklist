@@ -1,10 +1,16 @@
 import { BookContext } from "contexts/bookcontext";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ReactComponent as EditIcon } from "assets/icons/edit.svg";
 import { ReactComponent as DeleteIcon } from "assets/icons/delete.svg";
-import { CHANGE_READ_STATUS, REMOVE_BOOK } from "reducers/booklistReducer";
+import { ReactComponent as DragIcon } from "assets/icons/drag.svg";
+import {
+  CHANGE_BOOKS_ORDER,
+  CHANGE_READ_STATUS,
+  REMOVE_BOOK,
+} from "reducers/booklistReducer";
 
 const List = () => {
+  const [draggedIndex, setDraggedIndex] = useState(null);
   const { books, dispatch, setEditBookId, editBookId } =
     useContext(BookContext);
 
@@ -38,16 +44,42 @@ const List = () => {
     });
   };
 
+  const onDragStart = (e, index) => {
+    setDraggedIndex(index);
+    e.dataTransfer.effectAllowed = "move";
+  };
+
+  const onDragOver = (e) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+  };
+
+  const onDrop = (e, targetIndex) => {
+    e.preventDefault();
+    const newBooks = books.slice();
+    const [movedItem] = newBooks.splice(draggedIndex, 1);
+    newBooks.splice(targetIndex, 0, movedItem);
+    dispatch({
+      type: CHANGE_BOOKS_ORDER,
+      payload: newBooks,
+    });
+    setDraggedIndex(null);
+  };
+
   return (
     <div className="list">
       <ul>
-        {books.map((book) => (
+        {books.map((book, index) => (
           <ListItem
             key={book?.id}
             book={book}
             removeBook={removeBook}
             setEditBookId={setEditBookId}
             changeReadStatus={changeReadStatus}
+            onDragStart={onDragStart}
+            onDragOver={onDragOver}
+            onDrop={onDrop}
+            index={index}
           />
         ))}
       </ul>
@@ -55,10 +87,26 @@ const List = () => {
   );
 };
 
-const ListItem = ({ book, removeBook, changeReadStatus, setEditBookId }) => {
+const ListItem = ({
+  book,
+  removeBook,
+  changeReadStatus,
+  setEditBookId,
+  onDragOver,
+  onDragStart,
+  onDrop,
+  index,
+}) => {
   const className = book?.status ? "bookCompleted" : "";
   return (
-    <li key={book?.id} className={className}>
+    <li
+      key={book?.id}
+      className={className}
+      draggable
+      onDragOver={(e) => onDragOver(e)}
+      onDrop={(e) => onDrop(e, index)}
+      onDragStart={(e) => onDragStart(e, index)}
+    >
       <span>
         <input
           type="checkbox"
@@ -85,6 +133,9 @@ const ListItem = ({ book, removeBook, changeReadStatus, setEditBookId }) => {
         disabled={book?.status}
       >
         <DeleteIcon />
+      </button>
+      <button className="drag">
+        <DragIcon />
       </button>
     </li>
   );

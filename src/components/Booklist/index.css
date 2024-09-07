@@ -70,6 +70,14 @@
     button[disabled] {
       pointer-events: none;
     }
+
+    .drag {
+      cursor: grab;
+    }
+
+    .drag:active {
+      cursor: grabbing;
+    }
   }
 
   .bookCompleted {
